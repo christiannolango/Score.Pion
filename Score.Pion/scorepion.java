@@ -1,0 +1,39 @@
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import java.util.*;
+
+
+public class scorepion extends JApplet {
+
+	public int APPLET_WIDTH = 800, APPLET_HEIGHT = 600;
+	private JPanel mainPanel = new JPanel();
+	private JPanel sheetPanel = new JPanel();
+	private JLabel l1 = new JLabel("Sheet"+"\n");
+	private JLabel l2 = new JLabel("Note");
+	private JPanel notePanel = new JPanel();
+	
+	
+	
+	public void init(){
+		setLayout(new GridLayout(3,1));
+		
+		
+		SheetMusic s = new SheetMusic();
+		add(s);
+		getContentPane();
+		
+		add(notePanel);
+		notePanel.add(l2);
+
+		
+		setSize(APPLET_WIDTH, APPLET_HEIGHT);
+		
+	}
+	
+	
+	
+	
+}
