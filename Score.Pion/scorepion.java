@@ -28,7 +28,6 @@ public class scorepion extends JApplet {
 		add(notePanel);
 		notePanel.add(l2);
 
-		aaa
 		setSize(APPLET_WIDTH, APPLET_HEIGHT);
 		
 	}
