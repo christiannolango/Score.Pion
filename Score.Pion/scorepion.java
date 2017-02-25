@@ -8,7 +8,7 @@ import java.util.*;
 
 public class scorepion extends JApplet {
 
-	public int APPLET_WIDTH = 800, APPLET_HEIGHT = 600;
+	private int APPLET_WIDTH = 1920, APPLET_HEIGHT = 1080;
 	private JPanel mainPanel = new JPanel();
 	private JPanel sheetPanel = new JPanel();
 	private JLabel l1 = new JLabel("Sheet"+"\n");

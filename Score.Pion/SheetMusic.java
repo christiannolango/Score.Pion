@@ -8,7 +8,7 @@ public class SheetMusic extends JPanel{
 		setBackground(Color.WHITE);
 		
 		for (int i = 0; i < 50; i+= 10){
-		g.drawLine(0, i+60, 1600, i+60);
+		g.drawLine(100, i+60, 1820, i+60);
 		}
 	}
 }
