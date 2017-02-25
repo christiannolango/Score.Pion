@@ -22,9 +22,8 @@ public class scorepion extends JApplet {
 		
 		
 		SheetMusic s = new SheetMusic();
-		add(s);
 		getContentPane();
-		
+		add(s);
 		add(notePanel);
 		notePanel.add(l2);
 
