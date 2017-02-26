@@ -3,26 +3,29 @@
  */
 public class Measure {
     private static double keySignature = 4.00;
-    private double beatsleft = 0.0; //beatsleft tells the program how many beats required to have a full measure
+    private static double beatsLeft = 4.0; //beatsleft tells the program how many beats required to have a full measure
 
 
-    private final double halfNote = 2.0;
-    private final double quarterNote = 1.0;
-    private final double eighthNote = 0.50;
-    private final double sixteenthNote = 0.25;
+    private final static double halfNote = 2.0;
+    private final static double quarterNote = 1.0;
+    private final static double eighthNote = 0.50;
+    private final static double sixteenthNote = 0.25;
 
 
-    public Measure(int x) {
+    public static double setBeatsLeft(int x) {
         switch (x) {
-            case 1: keySignature = 4.00 - halfNote;
+            case 1: beatsLeft = beatsLeft - halfNote;
                 break;
-            case 2: keySignature = 4.00 - quarterNote;
+            case 2: beatsLeft = beatsLeft - quarterNote;
                 break;
-            case 3: keySignature = 4.00 - eighthNote;
+            case 3: beatsLeft = beatsLeft - eighthNote;
                 break;
-            case 4: keySignature = 4.00 - sixteenthNote;
-
+            case 4: beatsLeft = beatsLeft - sixteenthNote;
         }
+        return beatsLeft;
+    }//edit beatsleft
 
-    }
+    public static void clearKeySig(){
+        beatsLeft=keySignature;
+    }//clear KeySig to default value
 }
