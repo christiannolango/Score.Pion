@@ -5,7 +5,7 @@ public class Measure {
     private static double keySignature = 4.00;
     private static double beatsLeft = 4.0; //beatsleft tells the program how many beats required to have a full measure
 
-
+    private final static double wholeNote = 4.0;
     private final static double halfNote = 2.0;
     private final static double quarterNote = 1.0;
     private final static double eighthNote = 0.50;
@@ -14,13 +14,13 @@ public class Measure {
 
     public static double setBeatsLeft(int x) {
         switch (x) {
-            case 1: beatsLeft = beatsLeft - halfNote;
+            case 1: beatsLeft = beatsLeft = wholeNote;
+            case 2: beatsLeft = beatsLeft - halfNote;
                 break;
-            case 2: beatsLeft = beatsLeft - quarterNote;
+            case 3: beatsLeft = beatsLeft - quarterNote;
                 break;
-            case 3: beatsLeft = beatsLeft - eighthNote;
+            case 4: beatsLeft = beatsLeft - eighthNote;
                 break;
-            case 4: beatsLeft = beatsLeft - sixteenthNote;
         }
         return beatsLeft;
     }//edit beatsleft
