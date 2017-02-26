@@ -21,7 +21,7 @@ public class SheetMusic extends JPanel{
 
 	private class ButtonListener implements MouseListener {
 		public void mousePressed(MouseEvent e) {
-            int height = e.getY();
+            int note = e.getY();
 
 		}
 
