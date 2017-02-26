@@ -3,6 +3,8 @@
  */
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 public class ButtonPanel extends JPanel{
     private JRadioButton wholeNote;
@@ -38,4 +40,5 @@ public class ButtonPanel extends JPanel{
 
         this.setVisible(true);
     }
+
 }
