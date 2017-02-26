@@ -5,6 +5,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class SheetMusic extends JPanel{
+    public SheetMusic() {
+        ButtonListener buttonListener = new ButtonListener();
+        addMouseListener(buttonListener);
+    }
+
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 		setBackground(Color.WHITE);
