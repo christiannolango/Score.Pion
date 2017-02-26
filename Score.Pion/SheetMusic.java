@@ -22,6 +22,18 @@ public class SheetMusic extends JPanel{
 	private class ButtonListener implements MouseListener {
 		public void mousePressed(MouseEvent e) {
             int height = e.getY();
+            if (ButtonPanel.getWholeNote().isSelected()) {
+                Measure.setBeatsLeft(1);
+            }
+            if (ButtonPanel.getHalfNote().isSelected()) {
+                Measure.setBeatsLeft(2);
+            }
+            if (ButtonPanel.getQuarterNote().isSelected()) {
+                Measure.setBeatsLeft(3);
+            }
+            if (ButtonPanel.getEighthNote().isSelected()) {
+                Measure.setBeatsLeft(4);
+            }
 
 		}
 

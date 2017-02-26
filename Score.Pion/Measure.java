@@ -9,7 +9,6 @@ public class Measure {
     private final static double halfNote = 2.0;
     private final static double quarterNote = 1.0;
     private final static double eighthNote = 0.50;
-    private final static double sixteenthNote = 0.25;
 
 
     public static double setBeatsLeft(int x) {

@@ -7,11 +7,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class ButtonPanel extends JPanel{
-    private JRadioButton wholeNote;
-    private JRadioButton halfNote;
-    private JRadioButton quarterNote;
-    private JRadioButton eighthNote;
-    private ButtonGroup bG;
+    static JRadioButton wholeNote;
+    static JRadioButton halfNote;
+    static JRadioButton quarterNote;
+    static JRadioButton eighthNote;
+    static ButtonGroup bG;
 
     public ButtonPanel() {
         setBackground(Color.CYAN);
@@ -41,4 +41,19 @@ public class ButtonPanel extends JPanel{
         this.setVisible(true);
     }
 
+    public static JRadioButton getWholeNote() {
+        return wholeNote;
+    }
+
+    public static JRadioButton getHalfNote() {
+        return halfNote;
+    }
+
+    public static JRadioButton getQuarterNote() {
+        return quarterNote;
+    }
+
+    public static JRadioButton getEighthNote() {
+        return eighthNote;
+    }
 }
