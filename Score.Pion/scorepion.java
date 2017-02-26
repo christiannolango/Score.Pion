@@ -12,20 +12,17 @@ public class scorepion extends JApplet {
 	private JPanel mainPanel = new JPanel();
 	private JPanel sheetPanel = new JPanel();
 	private JLabel l1 = new JLabel("Sheet"+"\n");
-	private JLabel l2 = new JLabel("Note");
-	private JPanel notePanel = new JPanel();
+	private ControlPanel notePanel = new ControlPanel();
 	
 	
 	
 	public void init(){
-		setLayout(new GridLayout(3,1));
-		
 		
 		SheetMusic s = new SheetMusic();
 		getContentPane();
-		add(s);
-		add(notePanel);
-		notePanel.add(l2);
+		setLayout(new GridLayout(2,1));
+		this.add(s);
+		this.add(notePanel);
 
 		setSize(APPLET_WIDTH, APPLET_HEIGHT);
 		
