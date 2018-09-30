@@ -1,13 +1,19 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class SheetMusic extends JPanel{
+    String noteType;
     public SheetMusic() {
         ButtonListener buttonListener = new ButtonListener();
         addMouseListener(buttonListener);
+
     }
 
 	public void paintComponent(Graphics g){
@@ -21,12 +27,33 @@ public class SheetMusic extends JPanel{
 		for (int j = 350; j < 450; j += 20) {
 		    g.drawLine(100, j+50,1820,j+50);
         }
+
         setSize(1920,700);
+        BufferedImage img = null;
+        try {
+            img = ImageIO.read(new File("WholeNote.png"));
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+        BufferedImage img2 = null;
+        try {
+            img2 = ImageIO.read(new File("halfNote.png"));
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+
+        g.drawImage(img,30,-60,null);
+        g.drawImage(img,70,-60,null);
 	}
 
 	private class ButtonListener implements MouseListener {
 		public void mousePressed(MouseEvent e) {
-            int height = e.getY();
+            int x = e.getY();
+            int y = e.getX();
+
+
             if (ButtonPanel.getWholeNote().isSelected()) {
                 Measure.setBeatsLeft(1);
             }
